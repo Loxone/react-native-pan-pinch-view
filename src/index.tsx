@@ -285,7 +285,7 @@ export default forwardRef(function PanPinchView(
 
   const subscribeToWheelEvents = () => {
     if (
-      ['ios', 'android'].includes(Platform.OS) &&
+      !['ios', 'android'].includes(Platform.OS) &&
       !subscribedToWheelRef.current
     ) {
       if (containerRef.current) {
